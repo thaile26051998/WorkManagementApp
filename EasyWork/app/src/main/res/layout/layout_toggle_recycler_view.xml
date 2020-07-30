@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <merge
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:parentTag="android.widget.LinearLayout">
+
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/btnToggle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:drawableEnd="@drawable/selector_toggle_collapse_expand"
+            android:paddingHorizontal="@dimen/margin_low_medium"
+            tools:text="RecyclerView title" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:verticallyDivided="@{true}"
+            tools:itemCount="4"
+            tools:visibility="visible" />
+    </merge>
+</layout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hcmus.easywork.views.ExtendedMaterialToolBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:support_navigate_back="true"
+            app:title="@string/action_manage_members" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvGroupMembers"
+            gridSpacing="@{@dimen/margin_small}"
+            includeEdge="@{true}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@id/centerGuideLine"
+            app:layout_constraintTop_toBottomOf="@id/toolbar"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_group_member" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/centerGuideLine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#bbbbbb"
+            app:layout_constraintBottom_toBottomOf="@id/centerGuideLine"
+            app:layout_constraintTop_toTopOf="@id/centerGuideLine" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title_add_members"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingHorizontal="@dimen/margin_medium"
+            android:paddingVertical="@dimen/margin_small"
+            android:text="@string/action_manage_members"
+            android:textAppearance="@style/CustomTextAppearance.ListOptionItem"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/centerGuideLine" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/margin_small"
+            android:background="?android:selectableItemBackground"
+            android:src="@drawable/ic_toolbar_add"
+            app:layout_constraintBottom_toBottomOf="@id/title_add_members"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/title_add_members" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvProjectMembers"
+            gridSpacing="@{@dimen/margin_small}"
+            includeEdge="@{true}"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:nestedScrollingEnabled="false"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/title_add_members"
+            tools:itemCount="3"
+            tools:listitem="@layout/item_group_member" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

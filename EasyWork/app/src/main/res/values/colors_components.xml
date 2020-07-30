@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_btn_google">#F33D2F</color>
+    <color name="color_btn_facebook">#3B5998</color>
+
+    <color name="color_message_sender">#1B1A1D</color>
+    <color name="color_message_content">#616161</color>
+
+    <color name="color_button_end_call">#E32727</color>
+    <color name="color_floating_button">#E3E3E3</color>
+</resources>

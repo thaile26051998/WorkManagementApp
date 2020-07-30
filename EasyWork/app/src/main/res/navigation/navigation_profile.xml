@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_profile"
+    app:startDestination="@id/screen_profile">
+    <fragment
+        android:id="@+id/screen_profile"
+        android:name="com.hcmus.easywork.ui.profile.FragmentProfile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_change_password"
+            app:destination="@id/screen_change_password" />
+    </fragment>
+    <dialog
+        android:id="@+id/screen_change_password"
+        android:name="com.hcmus.easywork.ui.profile.FragmentChangePassword"
+        tools:layout="@layout/fragment_change_password" />
+</navigation>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="leader"
+            type="java.lang.Boolean" />
+    </data>
+
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/like"
+        android:layout_width="14dp"
+        android:layout_height="14dp"
+        android:src="@{leader ? @drawable/outline_verified_user_24 : null}"
+        />
+</layout>

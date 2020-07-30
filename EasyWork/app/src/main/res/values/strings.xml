@@ -1,0 +1,206 @@
+<resources>
+    <string name="app_name">Easy Work</string>
+    <string name="hint_password">Password</string>
+    <string name="hint_email">Email</string>
+    <string name="hint_phone_number">Phone number</string>
+    <string name="hint_display_name">Display name</string>
+
+    <string name="button_save_changes">Save changes</string>
+    <string name="button_login">Login</string>
+    <string name="button_log_in_google">Google</string>
+    <string name="button_log_in_facebook">Facebook</string>
+    <string name="button_forgot_password">Forgot password&#63;</string>
+    <string name="button_sign_up">Sign up</string>
+
+    <!--    App bottom navigation-->
+    <string name="nav_news">News</string>
+    <string name="nav_chat">Chat</string>
+    <string name="nav_tasks">My tasks</string>
+    <string name="nav_projects">Projects</string>
+
+    <string name="nav_settings">Settings</string>
+    <string name="title_news">News</string>
+
+    <string name="text_state">State</string>
+    <string name="text_priority">Priority</string>
+    <string name="text_members">Members</string>
+    <string name="text_comments">Comments:</string>
+    <string name="hint_comment">Type a comment</string>
+
+    <string name="priority_high">High</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_low">Low</string>
+    <string name="priority_undefined">Undefined</string>
+
+    <string name="state_new">New</string>
+    <string name="state_active">Active</string>
+    <string name="state_reviewing">Reviewing</string>
+    <string name="state_resolved">Resolved</string>
+    <string name="state_closed">Closed</string>
+    <string name="state_overdue">Overdue</string>
+    <string name="state_completed">Completed</string>
+
+
+    <string name="placeholder_finished"><![CDATA[<b>%s</b> has just finished task <b>%s</b>]]></string>
+    <string name="placeholder_mentioned"><![CDATA[<b>%s</b> mentioned you in task <b>%s</b>]]></string>
+    <string name="placeholder_assign"><![CDATA[<b>%s</b> assign you to task <b>%s</b>]]></string>
+
+    <string name="action_call">Call</string>
+    <string name="action_video_call">Video call</string>
+    <string name="action_info">Info</string>
+    <string name="action_read_all">Mark all as read</string>
+    <string name="action_delete_all">Delete all</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_search">Search</string>
+    <string name="action_filter">Filter</string>
+    <string name="action_sort">Sort</string>
+    <string name="action_add_project">Add project</string>
+    <string name="action_set_leader">Set leader</string>
+    <string name="action_create_work">Create</string>
+    <string name="action_search_conversation">Conversation or people name</string>
+    <string name="action_start_conversation">Start conversation</string>
+    <string name="action_navigate_forward">Navigate up</string>
+
+    <string name="action_mark_as_read">Mark as read</string>
+    <string name="filter_notification_all">All</string>
+    <string name="filter_notification_mentioned">\Mentioned</string>
+    <string name="filter_notification_assigned">Assigned</string>
+
+    <string name="pref_edit_profile">Edit profile</string>
+    <string name="pref_change_password">Change password</string>
+    <string name="pref_about">About</string>
+
+    <string name="action_preferences">Preferences</string>
+    <string name="action_about">About</string>
+    <string name="action_log_out">Log out</string>
+
+    <string name="forgot_password_description">Enter email associated with your account</string>
+    <string name="confirm_code_description">Enter 6-digit code that sent to your mail/number phone</string>
+    <string name="button_verify">Verify</string>
+    <string name="button_reset_pass">Reset password</string>
+    <string name="text_email_warning_invalid">Invalid email</string>
+    <string name="hint_password_requirement">Must be between %d - %d chars</string>
+
+    <string name="hint_current_password">Current password</string>
+    <string name="hint_new_password">New password</string>
+    <string name="hint_confirm_password">Confirm password</string>
+    <string name="text_or">OR CONTINUE WITH</string>
+    <string name="snack_bar_dismiss">Dismiss</string>
+    <string name="filter_task_all">All</string>
+    <string name="filter_task_new">New</string>
+    <string name="filter_task_active">Active</string>
+    <string name="filter_task_reviewing">Reviewing</string>
+    <string name="filter_task_resolved">Resolved</string>
+    <string name="filter_task_closed">Closed</string>
+    <string name="filter_task_overdue">Overdue</string>
+    <string name="filter_task_low">Low</string>
+    <string name="filter_task_medium">Medium</string>
+    <string name="filter_task_high">High</string>
+
+
+    <string name="leader">Leader</string>
+    <string name="assignee">Assignee</string>
+    <string name="unassigned">Unassigned</string>
+    <string name="assigned">Assigned to</string>
+    <string name="title_create_project">Create new project</string>
+
+    <string name="hint_project_name">Project name</string>
+    <string name="hint_description">Description</string>
+    <string name="format_standard_date">dd/MM/yyyy</string>
+    <string name="hint_enter_member_name">Enter member name</string>
+    <string name="create_project">created this project</string>
+    <string name="create_task">created this task</string>
+    <string name="hint_enter_project_description">Add more detail to this project...</string>
+    <string name="hint_enter_task_description">Add more detail to this task...</string>
+    <string name="change_name">change the name to</string>
+    <string name="change_description">change the description</string>
+    <string name="change_start_date">change the start date to</string>
+    <string name="change_due_date">change the due date to</string>
+    <string name="change_priority">change the priority to</string>
+    <string name="change_state">change the state to</string>
+    <string name="assign_to_task">assigned to you</string>
+    <string name="add_to_project">added you to this project</string>
+    <string name="remove_member">removed you from this project</string>
+    <string name="set_leader">set you as the leader</string>
+    <string name="leave_project">has left this project</string>
+    <string name="archive_project">has archived this project</string>
+    <string name="delete_task">deleted this task</string>
+
+    <string name="welcome_message">Hi, %s!</string>
+
+    <string name="text_member_count_one">Member: 1</string>
+    <string name="text_member_count_more">Members: %d</string>
+    <string name="title_create_task">Create new task</string>
+    <string name="text_due_date">Due date</string>
+    <string name="action_add_task">Add task</string>
+    <string name="action_add_member">Add member</string>
+    <string name="hint_task_name">Task name</string>
+
+    <string name="format_full_time">yyyy-MM-dd\'T\'HH:mm:ss.SSSXXX</string>
+
+    <!--    Chat message-->
+    <string name="action_message_pin">Pin/unpin message</string>
+    <string name="action_message_like">Like/unlike</string>
+    <string name="action_message_copy">Copy</string>
+    <string name="action_message_remove">Remove</string>
+    <string name="action_message_reply">Reply</string>
+    <string name="hint_text_message">Type a message</string>
+
+    <string name="text_archived_project">Archived project</string>
+
+    <!--    Notification channels-->
+    <string name="channel_tasks">Tasks</string>
+    <string name="channel_tasks_description">Notify tasks</string>
+    <string name="channel_projects">Projects</string>
+    <string name="channel_projects_description">Notify projects</string>
+    <string name="channel_conversations">Conversations</string>
+    <string name="channel_conversations_description">Notify conversations</string>
+    <string name="channel_reminder">Reminder</string>
+    <string name="channel_reminder_description">Remind you when due date is coming</string>
+    <string name="channel_voice_high">Primary Voice Channel</string>
+    <string name="channel_voice_low">Primary Voice Channel</string>
+
+    <string name="notification_voice_calling">%s is calling</string>
+    <string name="call_action_decline">Decline</string>
+    <string name="call_action_answer">Answer</string>
+
+    <!--    Comment-->
+    <string name="text_place_holder_two_params">%s %s</string>
+    <string name="comment_action_comment">commented</string>
+    <string name="comment_action_attach">attached</string>
+    <string name="comment_action_create"></string>
+    <string name="comment_action_modify">modified</string>
+    <string name="text_start_date">Start date</string>
+    <string name="text_created_date">Created date</string>
+
+    <string name="action_project_sort_by_name">Name</string>
+    <string name="action_project_sort_by_due_date">Due date</string>
+    <string name="action_task_sort_by_state">State</string>
+    <string name="action_task_sort_by_priority">Priority</string>
+    <string name="hint_address">Address</string>
+    <string name="hint_birthday">Birthday</string>
+
+
+    <string name="action_open_conversation">Open conversation</string>
+    <string name="action_leave_project">Leave project</string>
+    <string name="action_archive_project">Archive project</string>
+
+    <!--    Create group chat-->
+    <string name="hint_group_name">Group name</string>
+    <string name="hint_group_description">Description</string>
+    <string name="hint_group_creator">Creator</string>
+    <string name="action_save">Save</string>
+    <string name="tab_group_chat">Group chat</string>
+    <string name="tab_direct_message">Direct message</string>
+    <string name="tab_pinned_messages">Pinned</string>
+
+    <string name="action_create_group">Create group</string>
+    <string name="action_start_direct_chat">Start direct chat</string>
+    <string name="action_manage_members">Members</string>
+    <string name="action_pinned_messages">Pinned</string>
+    <string name="action_shared_files">Shared files</string>
+    <string name="action_leave_group">Leave group</string>
+    <string name="action_archive_group">Archive group</string>
+    <string name="action_mute_notifications">Mute notifications</string>
+    <string name="action_delete_file">Delete</string>
+</resources>

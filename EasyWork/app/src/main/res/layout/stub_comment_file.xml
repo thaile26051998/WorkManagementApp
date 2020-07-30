@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="fileName"
+            type="java.lang.String" />
+
+        <variable
+            name="fileSize"
+            type="java.lang.String" />
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/margin_small"
+        app:cardElevation="@dimen/margin_extra_small"
+        app:strokeColor="?attr/colorControlNormal"
+        app:strokeWidth="0.5dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/margin_small"
+            android:paddingStart="@dimen/margin_small"
+            android:paddingEnd="@dimen/margin_low_medium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/fileType"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/ic_comment_attach_file"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/fileName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:text="@{fileName}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Body2"
+                app:layout_constraintStart_toEndOf="@id/fileType"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Specification.pdf" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{fileSize}"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+                app:layout_constraintStart_toStartOf="@id/fileName"
+                app:layout_constraintTop_toBottomOf="@id/fileName"
+                tools:text="3.2MB" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>

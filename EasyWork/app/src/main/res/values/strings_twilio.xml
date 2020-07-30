@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="twilio_voice_state_connecting">Connecting</string>
+    <string name="twilio_voice_state_connect_failed">Failed to connect</string>
+    <string name="twilio_voice_state_ended">Call ended</string>
+    <string name="twilio_voice_state_reconnecting">Reconnecting</string>
+    <string name="twilio_voice_state_reconnected">Reconnected</string>
+    <string name="twilio_voice_state_disconnected">Call ended</string>
+    <string name="twilio_voice_state_quality_changed">Call quality changed</string>
+    <string name="twilio_confirm_exit_call">Pressing back will end call, continue?</string>
+    <string name="twilio_voice_call_availability">Voice call:</string>
+    <string name="twilio_video_call_availability">Video call:</string>
+
+    <string name="popup_action_ok">OK</string>
+    <string name="popup_action_cancel">Cancel</string>
+</resources>

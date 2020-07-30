@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/margin_medium">
+
+        <com.microsoft.officeuifabric.peoplepicker.PeoplePickerView
+            android:id="@+id/people_picker_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/assign_member_background"
+            android:paddingStart="@dimen/margin_medium"
+            android:paddingEnd="0dp"
+            app:personaChipClickStyle="select"
+            app:showHint="true"
+            app:valueHint="@string/hint_enter_member_name" />
+
+    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+</layout>

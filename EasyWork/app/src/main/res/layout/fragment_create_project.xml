@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="project"
+            type="com.hcmus.easywork.models.Project" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hcmus.easywork.views.ExtendedMaterialToolBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/menu_create_work"
+            app:support_navigate_back="true"
+            app:title="@string/title_create_project" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@color/colorWhite"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/margin_medium"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_project_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtProjectName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="@dimen/image_button_size"
+                        android:paddingEnd="0dp"
+                        android:singleLine="true" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="@dimen/margin_extra_small"
+                    app:strokeColor="?attr/colorControlNormal"
+                    app:strokeWidth="0.75dp">
+
+                    <com.microsoft.officeuifabric.peoplepicker.PeoplePickerView
+                        android:id="@+id/people_picker_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:personaChipClickStyle="select"
+                        app:showHint="true"
+                        app:valueHint="@string/text_members" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:cardCornerRadius="@dimen/margin_extra_small"
+                    app:strokeColor="?attr/colorControlNormal"
+                    app:strokeWidth="0.75dp">
+
+                    <com.microsoft.officeuifabric.peoplepicker.PeoplePickerView
+                        android:id="@+id/leader_picker_select"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:personaChipClickStyle="select"
+                        app:showHint="true"
+                        app:valueHint="@string/leader" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:hint="@string/hint_description">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:maxLines="5"
+                        android:paddingStart="@dimen/image_button_size"
+                        android:paddingEnd="0dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtStartDate"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_extra_small"
+                        android:layout_weight="1"
+                        android:background="@drawable/date_picker_background"
+                        android:gravity="center"
+                        android:hint="@string/text_start_date"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtDueDate"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_extra_small"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:background="@drawable/date_picker_background"
+                        android:gravity="center"
+                        android:hint="@string/text_due_date"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+                </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+            </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?><!--Naming convention-->
+<!--ID of five main fragments is exactly the same as each's ID in menu xml-->
+<!--Other fragment's ID starts with screen_-->
+<!--Fragment's label starts with fragment_-->
+<!--Action'ID starts with action_-->
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/nav_projects">
+
+    <include app:graph="@navigation/navigation_authentication" />
+
+    <include app:graph="@navigation/navigation_personal_chat" />
+
+    <include app:graph="@navigation/navigation_profile" />
+
+    <include app:graph="@navigation/navigation_task" />
+
+    <include app:graph="@navigation/navigation_project" />
+
+    <include app:graph="@navigation/navigation_single_voice_call" />
+
+    <fragment
+        android:id="@+id/nav_notification"
+        android:name="com.hcmus.easywork.ui.news.FragmentNews"
+        android:label="fragment_news"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@id/action_view_task_detail"
+            app:destination="@id/navigation_task" />
+        <action
+            android:id="@+id/action_view_project_detail"
+            app:destination="@id/navigation_project" />
+        <action
+            android:id="@+id/action_view_projects"
+            app:destination="@id/nav_projects" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_conversations"
+        android:name="com.hcmus.easywork.ui.chat.FragmentConversations"
+        tools:layout="@layout/fragment_conversations">
+
+        <action
+            android:id="@+id/action_open_personal_conversation"
+            app:destination="@id/navigation_personal_chat" />
+        <action
+            android:id="@+id/action_start_conversation"
+            app:destination="@id/screen_start_conversation" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_exit_group"
+        app:destination="@id/nav_conversations"
+        app:popUpTo="@id/nav_conversations"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/nav_tasks"
+        android:name="com.hcmus.easywork.ui.task.FragmentTasks"
+        android:label="fragment_tasks"
+        tools:layout="@layout/fragment_tasks">
+
+        <action
+            android:id="@+id/action_view_task_detail"
+            app:destination="@id/navigation_task" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_projects"
+        android:name="com.hcmus.easywork.ui.project.FragmentProjects"
+        android:label="fragment_projects"
+        tools:layout="@layout/fragment_projects">
+
+        <action
+            android:id="@+id/action_view_project_detail"
+            app:destination="@id/navigation_project" />
+
+        <action
+            android:id="@+id/action_create_project"
+            app:destination="@id/screen_create_project" />
+
+        <action
+            android:id="@+id/action_view_profile"
+            app:destination="@id/navigation_profile" />
+
+        <action
+            android:id="@+id/action_view_about"
+            app:destination="@id/screen_about" />
+
+        <action
+            android:id="@+id/action_view_preferences"
+            app:destination="@id/screen_preferences" />
+
+        <action
+            android:id="@+id/action_authenticate"
+            app:destination="@id/navigation_authentication"
+            app:popUpTo="@id/navigation_main"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_start_conversation"
+        android:name="com.hcmus.easywork.ui.chat.group.FragmentStartConversation"
+        tools:layout="@layout/fragment_start_conversation">
+        <action
+            android:id="@+id/action_open_chat"
+            app:destination="@id/navigation_personal_chat"
+            app:popUpTo="@id/screen_start_conversation"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_create_project"
+        android:name="com.hcmus.easywork.ui.project.FragmentCreateProject"
+        tools:layout="@layout/fragment_create_project" />
+
+    <fragment
+        android:id="@+id/screen_about"
+        android:name="com.hcmus.easywork.ui.profile.FragmentAbout"
+        tools:layout="@layout/fragment_about" />
+
+    <fragment
+        android:id="@+id/screen_preferences"
+        android:name="com.hcmus.easywork.ui.profile.FragmentPreferences"
+        tools:layout="@layout/fragment_preferences" />
+
+    <action
+        android:id="@+id/action_open_single_voice_call"
+        app:destination="@id/navigation_single_voice_call" />
+
+    <action
+        android:id="@+id/action_authenticate"
+        app:destination="@id/navigation_authentication" />
+</navigation>

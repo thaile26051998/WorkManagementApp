@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="user"
+            type="com.hcmus.easywork.viewmodels.auth.User" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hcmus.easywork.views.ExtendedMaterialToolBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:support_navigate_back="true"
+            app:title="@string/pref_edit_profile" />
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_medium">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/avatar"
+                    android:layout_width="@dimen/size_avatar"
+                    android:layout_height="@dimen/size_avatar"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:background="@drawable/background_avatar"
+                    android:scaleType="centerCrop"
+                    app:layout_constraintDimensionRatio="1:1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:shapeAppearanceOverlay="@style/circularImageView" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilDisplayName"
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:hint="@string/hint_display_name"
+                    app:layout_constraintTop_toBottomOf="@id/avatar"
+                    app:startIconDrawable="@drawable/ic_input_username">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtDisplayName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:text="@{user.displayName}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilMail"
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:hint="@string/hint_email"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tilDisplayName"
+                    app:startIconDrawable="@drawable/ic_input_email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtMail"
+                        readOnly="@{true}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:singleLine="true"
+                        android:text="@{user.mail}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilPhoneNumber"
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:hint="@string/hint_phone_number"
+                    app:layout_constraintTop_toBottomOf="@id/tilMail"
+                    app:startIconDrawable="@drawable/ic_input_phone">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtPhoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="phone"
+                        android:text="@{user.phone}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilAddress"
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:hint="@string/hint_address"
+                    app:layout_constraintTop_toBottomOf="@id/tilPhoneNumber"
+                    app:startIconDrawable="@drawable/ic_home_white_24">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:inputType="text"
+                        android:text="@{user.address}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/dateOfBirth"
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/date_picker_background"
+                    android:drawableStart="@drawable/ic_date_24"
+                    android:drawablePadding="@dimen/margin_medium"
+                    android:gravity="start"
+                    android:hint="@string/hint_birthday"
+                    android:paddingStart="@dimen/margin_low_medium"
+                    android:paddingEnd="0dp"
+                    android:textAppearance="?attr/textAppearanceSubtitle1"
+                    app:layout_constraintTop_toBottomOf="@id/tilAddress" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnSaveChanges"
+                    style="@style/StandardButtonStyle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_extra_small"
+                    android:padding="@dimen/margin_medium"
+                    android:text="@string/button_save_changes"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/dateOfBirth" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnChangePassword"
+                    style="@style/StandardButtonStyle.Outline"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/margin_medium"
+                    android:text="@string/pref_change_password"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/btnSaveChanges" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

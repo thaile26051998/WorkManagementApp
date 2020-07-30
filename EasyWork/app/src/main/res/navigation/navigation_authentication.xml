@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_authentication"
+    app:startDestination="@id/screen_login">
+    <fragment
+        android:id="@+id/screen_login"
+        android:name="com.hcmus.easywork.ui.auth.FragmentLogin"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_sign_up"
+            app:destination="@id/screen_sign_up"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_forgot_password"
+            app:destination="@id/screen_forgot_password"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_open_enter" />
+        <action
+            android:id="@+id/action_continue_with_facebook"
+            app:destination="@id/screen_facebook_authentication"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_open_enter" />
+
+        <action
+            android:id="@+id/action_continue_with_google"
+            app:destination="@id/screen_google_authentication"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_open_enter" />
+    </fragment>
+    <action
+        android:id="@+id/action_logon"
+        app:destination="@id/navigation_main"
+        app:enterAnim="@anim/fragment_open_enter"
+        app:popUpTo="@id/navigation_authentication"
+        app:popUpToInclusive="true" />
+    <fragment
+        android:id="@+id/screen_sign_up"
+        android:name="com.hcmus.easywork.ui.auth.signup.FragmentSignUp"
+        tools:layout="@layout/fragment_sign_up" />
+    <fragment
+        android:id="@+id/screen_forgot_password"
+        android:name="com.hcmus.easywork.ui.auth.FragmentForgotPassword"
+        tools:layout="@layout/fragment_forgot_password">
+        <action
+            android:id="@+id/action_confirm_code"
+            app:destination="@id/screen_code_confirmation"
+            app:enterAnim="@anim/fragment_open_enter"
+            app:popEnterAnim="@anim/fragment_open_exit" />
+    </fragment>
+    <fragment
+        android:id="@+id/screen_code_confirmation"
+        android:name="com.hcmus.easywork.ui.auth.signup.FragmentCodeConfirmation"
+        tools:layout="@layout/fragment_code_confirmation" />
+
+    <fragment
+        android:id="@+id/screen_facebook_authentication"
+        android:name="com.hcmus.easywork.ui.auth.integrated.FragmentFacebookAuthentication" />
+
+    <fragment
+        android:id="@+id/screen_google_authentication"
+        android:name="com.hcmus.easywork.ui.auth.integrated.FragmentGoogleAuthentication" />
+</navigation>

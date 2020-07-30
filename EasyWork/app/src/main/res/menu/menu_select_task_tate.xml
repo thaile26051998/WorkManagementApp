@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_select_test_state_new"
+        android:title="@string/state_new" />
+    <item
+        android:id="@+id/action_select_test_state_active"
+        android:title="@string/state_active" />
+    <item
+        android:id="@+id/action_select_test_state_reviewing"
+        android:title="@string/state_reviewing" />
+    <item
+        android:id="@+id/action_select_test_state_resolved"
+        android:title="@string/state_resolved" />
+    <item
+        android:id="@+id/action_select_test_state_closed"
+        android:title="@string/state_closed" />
+    <item
+        android:id="@+id/action_select_test_state_overdue"
+        android:title="@string/state_overdue" />
+</menu>

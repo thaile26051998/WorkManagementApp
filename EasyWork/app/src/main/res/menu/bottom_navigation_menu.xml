@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/nav_projects"
+        android:icon="@drawable/ic_nav_projects"
+        android:title="@string/nav_projects"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_notification"
+        android:icon="@drawable/ic_nav_notifications"
+        android:title="@string/nav_news"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_conversations"
+        android:icon="@drawable/ic_nav_conversations"
+        android:title="@string/nav_chat"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/nav_tasks"
+        android:icon="@drawable/ic_nav_tasks"
+        android:title="@string/nav_tasks"
+        app:showAsAction="ifRoom" />
+</menu>

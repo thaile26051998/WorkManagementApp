@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hcmus.easywork.views.ExtendedMaterialToolBar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/menu_create_work"
+            app:support_navigate_back="true"
+            app:title="@string/title_create_task" />
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipeLayout"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:background="@color/colorWhite"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/toolbar"
+                app:layout_constraintVertical_bias="0.0">
+
+                <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/margin_medium"
+                    android:layout_marginEnd="@dimen/margin_medium"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_small"
+                        android:hint="@string/hint_task_name"
+                        app:helperTextEnabled="true">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtTaskName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingStart="@dimen/image_button_size"
+                            android:paddingEnd="0dp"
+                            android:singleLine="true" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:helperText="@string/assigned">
+
+                        <com.microsoft.officeuifabric.peoplepicker.PeoplePickerView
+                            android:id="@+id/people_picker_select"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/assign_member_background"
+                            app:personaChipClickStyle="select"
+                            app:showHint="true"
+                            app:valueHint="@string/hint_enter_member_name" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.circularreveal.CircularRevealLinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                    </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txtDueDate"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium"
+                        android:layout_marginBottom="@dimen/margin_small"
+                        android:layout_weight="1"
+                        android:background="@drawable/date_picker_background"
+                        android:hint="@string/text_due_date"
+                        android:paddingStart="@dimen/image_button_size"
+                        android:paddingEnd="0dp"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+                    <com.hcmus.easywork.ui.task.DropDownListPriority
+                        android:id="@+id/ddlPriority"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_low_medium"
+                        android:paddingStart="@dimen/margin_medium"
+                        android:paddingEnd="0dp"
+                        app:cardUseCompatPadding="@dimen/margin_small"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_low_medium"
+                        android:hint="@string/hint_description">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtDescription"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="5"
+                            android:paddingStart="@dimen/image_button_size"
+                            android:paddingEnd="0dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+                </com.google.android.material.circularreveal.CircularRevealLinearLayout>
+            </androidx.core.widget.NestedScrollView>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

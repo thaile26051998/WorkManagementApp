@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+<!--    <item android:drawable="@drawable/linear_background" />-->
+    <item android:drawable="@color/colorWhite" />
+    <item>
+        <bitmap android:src="@drawable/ic_group"
+            android:gravity="center"/>
+    </item>
+    <item android:bottom="132dp">
+        <bitmap android:src="@drawable/ic_easy_work"
+            android:gravity="bottom|center_horizontal"/>
+    </item>
+</layer-list>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_single_voice_call"
+    app:startDestination="@id/screen_single_voice_call">
+
+    <fragment
+        android:id="@+id/screen_single_voice_call"
+        android:name="com.hcmus.easywork.ui.chat.voice.FragmentSingleVoiceCall"
+        tools:layout="@layout/fragment_single_voice_call">
+
+        <action
+            android:id="@+id/action_require_microphone_permission"
+            app:destination="@id/screen_microphone_permission" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_microphone_permission"
+        android:name="com.hcmus.easywork.ui.permission.FragmentMicrophonePermission" />
+
+    <action
+        android:id="@+id/action_refuse_microphone_permission"
+        app:popUpTo="@id/screen_single_voice_call"
+        app:popUpToInclusive="true" />
+
+</navigation>

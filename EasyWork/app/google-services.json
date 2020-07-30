@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "896500656885",
+    "firebase_url": "https://easywork-532f1.firebaseio.com",
+    "project_id": "easywork-532f1",
+    "storage_bucket": "easywork-532f1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:896500656885:android:6573acfb2b1e55a73e73bc",
+        "android_client_info": {
+          "package_name": "com.hcmus.easywork"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "896500656885-lpl06c3l2b20crgnrj5mug8cptlgqpuj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAphB4oz4U57LkiA3_QUMAdkizdpXZTpao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "896500656885-lpl06c3l2b20crgnrj5mug8cptlgqpuj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

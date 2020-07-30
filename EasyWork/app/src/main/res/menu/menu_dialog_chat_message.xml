@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_pin"
+        android:icon="@drawable/ic_message_pin"
+        android:title="@string/action_message_pin"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_like"
+        android:icon="@drawable/ic_message_like"
+        android:title="@string/action_message_like"
+        app:showAsAction="ifRoom" />
+<!--    <item-->
+<!--        android:id="@+id/action_copy"-->
+<!--        android:icon="@drawable/ic_message_copy"-->
+<!--        android:title="@string/action_message_copy"-->
+<!--        app:showAsAction="ifRoom" />-->
+    <item
+        android:id="@+id/action_remove"
+        android:icon="@drawable/ic_message_remove"
+        android:title="@string/action_message_remove"
+        app:showAsAction="ifRoom" />
+</menu>

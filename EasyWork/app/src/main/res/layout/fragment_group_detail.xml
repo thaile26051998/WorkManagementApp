@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="group"
+            type="com.hcmus.easywork.models.chat.group.Group" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:menu="@menu/menu_group_info"
+            app:navigationIcon="@drawable/round_close_24"
+            app:title="Group detail" />
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/scrollView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="@dimen/margin_small">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/hint_group_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@{group.name}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:hint="@string/hint_group_description">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtDescription"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="@{group.description}" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/StandardTextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:hint="@string/hint_group_creator">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edtCreator"
+                        readOnly="@{true}"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    app:cardCornerRadius="@dimen/margin_small"
+                    app:strokeColor="?attr/colorControlNormal"
+                    app:strokeWidth="0.5dp">
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        app:divider="?android:dividerHorizontal"
+                        app:showDividers="middle">
+
+                        <com.google.android.material.switchmaterial.SwitchMaterial
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:drawableStart="@drawable/ic_nav_notifications"
+                            android:drawablePadding="24dp"
+                            android:paddingHorizontal="@dimen/margin_medium"
+                            android:text="@string/action_mute_notifications"
+                            android:textAppearance="@style/CustomTextAppearance.ListOptionItem" />
+
+                        <com.hcmus.easywork.views.ListOptionItem
+                            android:id="@+id/btnManageMembers"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:startIcon="@drawable/outline_group_24"
+                            app:title="@string/action_manage_members" />
+
+                        <com.hcmus.easywork.views.ListOptionItem
+                            android:id="@+id/btnPinned"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:startIcon="@drawable/pin_outline"
+                            app:title="@string/action_pinned_messages" />
+
+                        <com.hcmus.easywork.views.ListOptionItem
+                            android:id="@+id/btnSharedFiles"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:startIcon="@drawable/baseline_attach_file_24"
+                            app:title="@string/action_shared_files" />
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

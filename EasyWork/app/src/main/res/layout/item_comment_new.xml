@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="android.view.View" />
+
+        <variable
+            name="item"
+            type="com.hcmus.easywork.models.Comment" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.hcmus.easywork.views.UserAvatarView
+            android:id="@+id/avatar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:avatarSize="medium"
+            app:avatarStyle="circle"
+            app:layout_constraintBottom_toBottomOf="@id/time"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/title"
+            action="@{item.action}"
+            actor="@{item.actor}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/margin_extra_small"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="@color/color_message_sender"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/avatar"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nguyễn Quang Thạch attached" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/like"
+            android:layout_width="@dimen/margin_medium"
+            android:layout_height="@dimen/margin_medium"
+            android:backgroundTint="@color/colorWhite"
+            android:scaleType="fitCenter"
+            android:src="@drawable/ic_message_like"
+            app:layout_constraintStart_toEndOf="@id/time"
+            app:layout_constraintTop_toBottomOf="@id/title" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/option"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorWhite"
+            android:src="@drawable/ic_option_24"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{item.timeStamp}"
+            android:textAppearance="@style/TextAppearance.MaterialComponents.Caption"
+            android:textColor="@color/color_message_content"
+            app:layout_constraintStart_toStartOf="@id/title"
+            app:layout_constraintTop_toBottomOf="@id/title"
+            tools:text="3 minutes ago" />
+
+        <ViewStub
+            android:id="@+id/stubText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout="@layout/stub_comment_text"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
+            tools:visibility="gone" />
+
+        <ViewStub
+            android:id="@+id/stubImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout="@layout/stub_comment_image"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
+            app:layout_constraintWidth_max="wrap"
+            app:layout_constraintWidth_percent="@integer/item_comment_constraint_width"
+            tools:visibility="visible" />
+
+        <ViewStub
+            android:id="@+id/stubFile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_small"
+            android:layout_marginTop="@dimen/margin_extra_small"
+            android:layout="@layout/stub_comment_file"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/avatar"
+            app:layout_constraintWidth_max="wrap"
+            app:layout_constraintWidth_percent="@integer/item_comment_constraint_width"
+            tools:visibility="gone" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

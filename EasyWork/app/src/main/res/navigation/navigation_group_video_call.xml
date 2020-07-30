@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_group_video_call"
+    app:startDestination="@id/screen_group_video_call">
+
+    <fragment
+        android:id="@+id/screen_group_video_call"
+        android:name="com.hcmus.easywork.ui.chat.video.FragmentGroupVideoCall"
+        tools:layout="@layout/fragment_group_video_call">
+
+        <action
+            android:id="@+id/action_require_camera_permission"
+            app:destination="@id/screen_camera_permission" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_camera_permission"
+        android:name="com.hcmus.easywork.ui.permission.FragmentCameraPermission" />
+
+    <action
+        android:id="@+id/action_refuse_camera_permission"
+        app:popUpTo="@id/screen_group_video_call"
+        app:popUpToInclusive="true" />
+
+</navigation>

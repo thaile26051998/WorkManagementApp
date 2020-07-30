@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="shared_files_count">
+        <item quantity="one">%d file shared</item>
+        <item quantity="other">%d files shared</item>
+    </plurals>
+
+    <plurals name="group_members_count">
+        <item quantity="one">%d member</item>
+        <item quantity="other">%d members</item>
+    </plurals>
+</resources>

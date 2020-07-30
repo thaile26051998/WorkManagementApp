@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/ic_toolbar_search"
+        android:title="@string/action_search"
+        app:actionViewClass="androidx.appcompat.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:icon="@drawable/ic_toolbar_filter"
+        android:title="@string/action_filter"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group
+                android:id="@+id/group_filter"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/action_sort_by_state"
+                    android:title="@string/action_task_sort_by_state">
+                    <menu>
+                        <group
+                            android:id="@+id/group_filter_state"
+                            android:checkableBehavior="single">
+                            <item
+                                android:id="@+id/filter_all"
+                                android:checked="true"
+                                android:title="@string/filter_task_all" />
+                            <item
+                                android:id="@+id/filter_new"
+                                android:title="@string/filter_task_new" />
+                            <item
+                                android:id="@+id/filter_active"
+                                android:title="@string/filter_task_active" />
+                            <item
+                                android:id="@+id/filter_reviewing"
+                                android:title="@string/filter_task_reviewing" />
+                            <item
+                                android:id="@+id/filter_resolved"
+                                android:title="@string/filter_task_resolved" />
+                            <item
+                                android:id="@+id/filter_closed"
+                                android:title="@string/filter_task_closed" />
+                            <item
+                                android:id="@+id/filter_overdue"
+                                android:title="@string/filter_task_overdue" />
+                        </group>
+                    </menu>
+                </item>
+                <item
+                    android:id="@+id/action_sort_by_priority"
+                    android:title="@string/action_task_sort_by_priority">
+                    <menu>
+                        <group
+                            android:id="@+id/group_filter_priority"
+                            android:checkableBehavior="single">
+                            <item
+                                android:id="@+id/filter_all_priority"
+                                android:checked="true"
+                                android:title="@string/filter_task_all" />
+                            <item
+                                android:id="@+id/filter_low"
+                                android:title="@string/filter_task_low" />
+                            <item
+                                android:id="@+id/filter_medium"
+                                android:title="@string/filter_task_medium" />
+                            <item
+                                android:id="@+id/filter_high"
+                                android:title="@string/filter_task_high" />
+                        </group>
+                    </menu>
+
+                </item>
+
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/action_sort"
+        android:icon="@drawable/ic_toolbar_sort"
+        android:title="@string/action_sort"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group
+                android:id="@+id/group_sort"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/action_sort_by_name"
+                    android:title="@string/action_project_sort_by_name" />
+                <item
+                    android:id="@+id/action_sort_by_due_date"
+                    android:title="@string/action_project_sort_by_due_date" />
+            </group>
+        </menu>
+    </item>
+</menu>

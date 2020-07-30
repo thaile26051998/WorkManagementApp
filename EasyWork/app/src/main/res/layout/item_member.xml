@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="member"
+            type="com.hcmus.easywork.models.project.ProjectMember" />
+    </data>
+
+    <com.hcmus.easywork.views.UserAvatarView
+        android:id="@+id/avatar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="@dimen/margin_small"
+        app:avatar="@{member.user.avatar}"
+        app:avatarSize="medium"
+        app:avatarStyle="circle"
+        app:backgroundTint="@color/colorWhite"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</layout>

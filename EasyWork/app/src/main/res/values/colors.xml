@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_green">#14AFB4</color>
+    <color name="color_green_dark">#007F84</color>
+
+    <!--    TODO: custom app color-->
+    <color name="colorPrimary">@color/color_green</color>
+    <color name="colorPrimaryDark">@color/color_green_dark</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorWhite">#ffffff</color>
+
+    <color name="priority_high">#EFB938</color>
+    <color name="priority_medium">#25AAE1</color>
+    <color name="priority_low">#3BC59B</color>
+    <color name="priority_undefined">#737373</color>
+
+    <color name="state_new">#EB372D</color>
+    <color name="state_active">#37A5DD</color>
+    <color name="state_reviewing">#F8981D</color>
+    <color name="state_resolved">#30B98F</color>
+    <color name="state_closed">#CBCBCB</color>
+    <color name="state_overdue">#EB372D</color>
+
+    <color name="color_light_background">#EAF1F8</color>
+
+    <!--    TODO: change color for bottom navigation view-->
+    <color name="color_nav_toolbar">@color/colorWhite</color>
+    <color name="color_nav_item_unselected">#C3C7C9</color>
+    <color name="color_nav_item_selected">@color/color_green_dark</color>
+
+    <color name="color_notification_unread">#EDF2FA</color>
+    <color name="twilio_available">#0F9A39</color>
+    <color name="twilio_unavailable">#D50000</color>
+</resources>

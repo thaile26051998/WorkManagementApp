@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_add_task"
+        android:icon="@drawable/ic_toolbar_add"
+        android:title="@string/action_add_task"
+        app:showAsAction="ifRoom" />
+    <item
+        android:icon="@drawable/ic_toolbar_more_options"
+        android:title="@null"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/action_open_team_conversation"
+                android:icon="@drawable/ic_nav_conversations"
+                android:title="@string/action_open_conversation"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/action_leave_project"
+                android:icon="@drawable/ic_leave_project"
+                android:title="@string/action_leave_project"
+                app:showAsAction="ifRoom" />
+            <item
+                android:id="@+id/action_archive_project"
+                android:icon="@drawable/ic_archive_project"
+                android:title="@string/action_archive_project"
+                app:showAsAction="ifRoom" />
+        </menu>
+    </item>
+</menu>

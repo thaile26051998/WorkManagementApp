@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    App icon-->
+    <drawable name="ic_app">@drawable/ic_app_new</drawable>
+    <drawable name="ic_app_round">@drawable/ic_app</drawable>
+    <drawable name="ic_app_new">@drawable/easy_work_logo</drawable>
+
+    <!--    Bottom navigation icon-->
+    <drawable name="ic_nav_notifications">@drawable/ic_notifications_24</drawable>
+    <drawable name="ic_nav_conversations">@drawable/outline_message_24</drawable>
+    <drawable name="ic_nav_tasks">@drawable/ic_tasks_white_24</drawable>
+    <drawable name="ic_nav_projects">@drawable/ic_projects_white_24</drawable>
+
+    <!--    Icon in popup menu - Home-->
+    <drawable name="ic_action_preferences">@drawable/outline_build_24</drawable>
+    <drawable name="ic_action_about">@drawable/outline_info_24</drawable>
+    <drawable name="ic_action_log_out">@drawable/baseline_exit_to_app_24</drawable>
+
+    <drawable name="ic_project_publicity_private">@drawable/outline_lock_24</drawable>
+
+    <!--    TODO: customize icons in Login, Sign up screen-->
+    <drawable name="ic_input_username">@drawable/outline_person_24</drawable>
+    <drawable name="ic_input_password">@drawable/outline_vpn_key_24</drawable>
+    <drawable name="ic_button_google">@drawable/ic_google_24</drawable>
+    <drawable name="ic_button_facebook">@drawable/ic_facebook_24</drawable>
+    <drawable name="ic_input_email">@drawable/outline_email_24</drawable>
+    <drawable name="ic_input_phone">@drawable/outline_phone_24</drawable>
+
+    <drawable name="ic_like">@drawable/thumb_up_outline</drawable>
+
+    <!--    Chat message-->
+    <drawable name="ic_message_pin">@drawable/pin_outline</drawable>
+    <drawable name="ic_message_unpin">@drawable/pin_off_outline</drawable>
+    <drawable name="ic_message_like">@drawable/thumb_up_outline</drawable>
+    <drawable name="ic_message_copy">@drawable/outline_file_copy_24</drawable>
+    <drawable name="ic_message_remove">@drawable/outline_delete_24</drawable>
+    <drawable name="ic_message_send">@drawable/baseline_send_24</drawable>
+    <drawable name="ic_message_attach_file">@drawable/baseline_attach_file_24</drawable>
+
+    <!--    Task & project detail screen-->
+    <drawable name="ic_comment_attach_image">@drawable/outline_collections_24</drawable>
+    <drawable name="ic_comment_attach_file">@drawable/ic_message_attach_file</drawable>
+    <drawable name="ic_comment_send">@drawable/ic_message_send</drawable>
+
+    <!--    Toolbar-->
+    <drawable name="ic_toolbar_navigate_back">@drawable/baseline_arrow_back_24</drawable>
+    <drawable name="ic_toolbar_navigate_forward">@drawable/outline_arrow_forward_24</drawable>
+    <drawable name="ic_toolbar_search">@drawable/baseline_search_24</drawable>
+    <drawable name="ic_toolbar_sort">@drawable/sort_alphabetical_ascending</drawable>
+    <drawable name="ic_toolbar_add">@drawable/baseline_add_24</drawable>
+    <drawable name="ic_toolbar_filter">@drawable/baseline_filter_list_24</drawable>
+    <drawable name="ic_toolbar_more_options">@drawable/ic_option_24</drawable>
+    <drawable name="ic_leave_project">@drawable/ic_leave_24</drawable>
+    <drawable name="ic_archive_project">@drawable/ic_archive_24</drawable>
+
+    <!--    Shared file-->
+    <drawable name="ic_file_type_text">@drawable/outline_description_24</drawable>
+    <drawable name="ic_file_type_general">@drawable/outline_description_24</drawable>
+    <drawable name="ic_file_type_photo">@drawable/outline_image_24</drawable>
+
+    <!--    Call-->
+    <drawable name="ic_call_unmute">@drawable/baseline_mic_off_24</drawable>
+    <drawable name="ic_call_mute">@drawable/outline_mic_none_24</drawable>
+    <drawable name="ic_call_end">@drawable/baseline_call_end_24</drawable>
+    <drawable name="ic_call_speaker">@drawable/ic_volume_up_white_24dp</drawable>
+    <drawable name="ic_call_turn_off_camera">@drawable/outline_videocam_24</drawable>
+    <drawable name="ic_call_turn_on_camera">@drawable/outline_videocam_off_24</drawable>
+    <drawable name="ic_call_switch_camera">@drawable/round_autorenew_24</drawable>
+    <drawable name="ic_call_dominant_speaking">@drawable/ic_volume_up_white_24dp</drawable>
+    <drawable name="ic_twilio_available">@drawable/ic_tasks_white_24</drawable>
+    <drawable name="ic_twilio_unavailable">@drawable/round_highlight_off_24</drawable>
+</resources>

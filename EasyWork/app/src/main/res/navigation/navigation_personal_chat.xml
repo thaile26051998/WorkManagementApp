@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_personal_chat"
+    app:startDestination="@id/screen_chat">
+
+    <include app:graph="@navigation/navigation_group_detail" />
+
+    <include app:graph="@navigation/navigation_personal_detail" />
+
+    <include app:graph="@navigation/navigation_single_voice_call" />
+
+    <include app:graph="@navigation/navigation_single_video_call" />
+
+    <include app:graph="@navigation/navigation_group_voice_call" />
+
+    <include app:graph="@navigation/navigation_group_video_call" />
+
+    <fragment
+        android:id="@+id/screen_chat"
+        android:name="com.hcmus.easywork.ui.chat.message.FragmentChat"
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_view_shared_image"
+            app:destination="@id/screen_shared_image_view"/>
+
+        <action
+            android:id="@+id/action_show_option"
+            app:destination="@id/dialog_chat_message_option" />
+
+        <action
+            android:id="@+id/action_open_single_voice_call"
+            app:destination="@id/navigation_single_voice_call" />
+
+        <action
+            android:id="@+id/action_open_single_video_call"
+            app:destination="@id/navigation_single_video_call" />
+
+        <action
+            android:id="@+id/action_open_group_voice_call"
+            app:destination="@id/navigation_group_voice_call" />
+
+        <action
+            android:id="@+id/action_open_group_video_call"
+            app:destination="@id/navigation_group_video_call" />
+
+        <action
+            android:id="@+id/action_show_group_info"
+            app:destination="@id/navigation_group_detail" />
+
+        <action
+            android:id="@+id/action_show_personal_info"
+            app:destination="@id/navigation_personal_detail" />
+
+    </fragment>
+
+    <dialog
+        android:id="@+id/dialog_chat_message_option"
+        android:name="com.hcmus.easywork.ui.chat.message.DialogChatMessage"
+        tools:layout="@layout/dialog_chat_message" />
+
+    <fragment
+        android:id="@+id/screen_shared_image_view"
+        android:name="com.hcmus.easywork.ui.chat.image.FragmentSharedImageView"
+        tools:layout="@layout/fragment_shared_image_view"/>
+</navigation>

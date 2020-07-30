@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_project"
+    app:startDestination="@id/screen_project_detail">
+
+    <include app:graph="@navigation/navigation_personal_chat" />
+
+    <include app:graph="@navigation/navigation_task" />
+
+    <fragment
+        android:id="@+id/screen_project_detail"
+        android:name="com.hcmus.easywork.ui.project.FragmentProjectDetail"
+        tools:layout="@layout/fragment_project_detail">
+
+        <action
+            android:id="@+id/action_view_shared_image"
+            app:destination="@id/screen_shared_image_view" />
+
+        <action
+            android:id="@+id/action_create_task"
+            app:destination="@id/screen_create_task" />
+
+        <action
+            android:id="@+id/action_open_list_groups"
+            app:destination="@id/screen_project_groups" />
+
+        <action
+            android:id="@+id/action_view_task_detail"
+            app:destination="@id/navigation_task" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_create_task"
+        android:name="com.hcmus.easywork.ui.task.FragmentCreateTask"
+        tools:layout="@layout/fragment_create_task" />
+
+    <fragment
+        android:id="@+id/screen_shared_image_view"
+        android:name="com.hcmus.easywork.ui.chat.image.FragmentSharedImageView"
+        tools:layout="@layout/fragment_shared_image_view" />
+
+    <fragment
+        android:id="@+id/screen_project_groups"
+        android:name="com.hcmus.easywork.ui.chat.group.FragmentProjectGroups"
+        tools:layout="@layout/fragment_project_groups">
+
+        <action
+            android:id="@+id/action_open_chat"
+            app:destination="@id/navigation_personal_chat" />
+
+    </fragment>
+</navigation>

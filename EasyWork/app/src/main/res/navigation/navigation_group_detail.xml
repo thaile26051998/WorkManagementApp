@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_group_detail"
+    app:startDestination="@id/screen_group_detail">
+
+    <fragment
+        android:id="@+id/screen_group_detail"
+        android:name="com.hcmus.easywork.ui.chat.detail.group.FragmentGroupDetail"
+        tools:layout="@layout/fragment_group_detail">
+
+        <action
+            android:id="@+id/action_open_list_members"
+            app:destination="@id/screen_group_members" />
+
+        <action
+            android:id="@+id/action_open_pinned_messages"
+            app:destination="@id/screen_pinned_messages" />
+
+        <action
+            android:id="@+id/action_open_shared_files"
+            app:destination="@id/screen_shared_files" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_group_members"
+        android:name="com.hcmus.easywork.ui.chat.detail.group.FragmentGroupMembers"
+        tools:layout="@layout/fragment_group_members" />
+
+    <fragment
+        android:id="@+id/screen_pinned_messages"
+        android:name="com.hcmus.easywork.ui.chat.detail.FragmentPinnedMessages"
+        tools:layout="@layout/fragment_pinned_messages" />
+
+    <fragment
+        android:id="@+id/screen_shared_files"
+        android:name="com.hcmus.easywork.ui.chat.detail.FragmentSharedFiles"
+        tools:layout="@layout/fragment_shared_files" />
+</navigation>

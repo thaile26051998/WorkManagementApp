@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <merge
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:parentTag="androidx.constraintlayout.widget.ConstraintLayout">
+
+        <com.twilio.video.VideoView
+            android:id="@+id/videoView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintDimensionRatio="3:4"
+            app:layout_constraintTop_toTopOf="parent"
+            app:tviMirror="false" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/participantName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:padding="@dimen/margin_small"
+            android:textColor="@color/colorWhite"
+            app:layout_constraintEnd_toStartOf="@id/isAudioEnabled"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Nguyen Quang Thach" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/isDominantSpeaking"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:tint="@color/colorWhite"
+            android:visibility="gone"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/participantName"
+            app:srcCompat="@drawable/ic_call_dominant_speaking"
+            tools:visibility="visible" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/isAudioEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:tint="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_call_mute" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/isVideoEnabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:tint="@color/colorWhite"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/isAudioEnabled"
+            app:srcCompat="@drawable/ic_call_turn_off_camera" />
+
+    </merge>
+</layout>

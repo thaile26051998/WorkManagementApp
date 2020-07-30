@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="comment"
+            type="String" />
+    </data>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/commentText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="@dimen/margin_medium"
+        android:textSize="@dimen/text_size_medium"
+        android:text="@{comment}"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+        android:textIsSelectable="true"
+        tools:text="Preview comment" />
+</layout>

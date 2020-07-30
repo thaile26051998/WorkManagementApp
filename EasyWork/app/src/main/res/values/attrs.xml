@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="DateWidget">
+        <attr name="date_title" format="reference" />
+        <attr name="date_value" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ToggleRecyclerView">
+        <attr name="recycler_view_title" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CommentWidget">
+        <attr name="widget_hint" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ExtendedMaterialToolBar">
+        <attr name="support_navigate_back" format="boolean" />
+        <attr name="support_navigate_forward" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="PriorityWidget">
+        <attr name="value" format="enum">
+            <enum name="undefined" value="0" />
+            <enum name="high" value="1" />
+            <enum name="medium" value="2" />
+            <enum name="low" value="3" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ProjectStateWidget">
+        <attr name="project_state" format="enum">
+            <enum name="active" value="1" />
+            <enum name="completed" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TaskStateWidget">
+        <attr name="state" format="enum">
+            <enum name="new_" value="0" />
+            <enum name="active" value="1" />
+            <enum name="reviewing" value="2" />
+            <enum name="resolved" value="3" />
+            <enum name="closed" value="4" />
+            <enum name="overdue" value="5" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="UserAvatarView">
+        <attr name="avatar" format="reference" />
+    </declare-styleable>
+
+    <!--    For GridSpacingDecoration-->
+    <attr name="gridSpacing" format="dimension" />
+    <attr name="includeEdge" format="boolean" />
+
+    <declare-styleable name="ListOptionItem">
+        <attr name="title" format="string" />
+        <attr name="startIcon" format="reference" />
+    </declare-styleable>
+</resources>

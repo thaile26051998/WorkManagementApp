@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_delete_all"
+        android:icon="@drawable/outline_delete_24"
+        android:title="@string/action_delete_all"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_read_all"
+        android:icon="@drawable/baseline_done_all_24"
+        android:title="@string/action_read_all"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_filter"
+        android:icon="@drawable/baseline_filter_list_24"
+        android:title="@string/action_filter"
+        app:showAsAction="ifRoom">
+        <menu>
+            <group
+                android:id="@+id/group_sort"
+                android:checkableBehavior="single">
+                <item
+                    android:id="@+id/action_filter_all_news"
+                    android:checked="true"
+                    android:title="@string/filter_notification_all" />
+                <item
+                    android:id="@+id/action_filter_mention_news"
+                    android:title="@string/filter_notification_mentioned" />
+                <item
+                    android:id="@+id/action_filter_assigned_news"
+                    android:title="@string/filter_notification_assigned" />
+            </group>
+        </menu>
+    </item>
+</menu>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_personal_detail"
+    app:startDestination="@id/screen_personal_detail">
+
+    <fragment
+        android:id="@+id/screen_personal_detail"
+        android:name="com.hcmus.easywork.ui.chat.detail.personal.FragmentPersonalChatDetail"
+        tools:layout="@layout/fragment_personal_chat_detail">
+
+        <action
+            android:id="@+id/action_open_shared_files"
+            app:destination="@id/screen_shared_files" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/screen_shared_files"
+        android:name="com.hcmus.easywork.ui.chat.detail.FragmentSharedFiles"
+        tools:layout="@layout/fragment_shared_files" />
+
+</navigation>

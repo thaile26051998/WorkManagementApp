@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="CustomTextAppearance.Work.Name" parent="TextAppearance.AppCompat.Title" />
+
+    <style name="CustomTextAppearance.Work.Description" parent="TextAppearance.MaterialComponents.Body1" />
+
+    <style name="CustomTextAppearance.ListOptionItem" parent="TextAppearance.MaterialComponents.Subtitle1" />
+</resources>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="facebook_app_id">249657446247988</string>
+    <string name="fb_login_protocol_scheme">fb249657446247988</string>
+    <string name="google_client_id">1022391391386-nbl77hmbscr0hj2ishvkg1i8ku2d36rl.apps.googleusercontent.com</string>
+</resources>
